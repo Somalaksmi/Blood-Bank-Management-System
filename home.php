@@ -13,6 +13,15 @@ if (isset($_POST['searchByCityBtn'])) {
     $city = $_POST['city'];
     $donors = $db->searchDonorByCity($city);
 }
+if (isset($_POST['searchByGenderBtn'])) {
+    $gender = $_POST['genders'];
+    $donors = $db->searchDonorByGender($gender);
+}
+if (isset($_POST['searchByNameBtn'])) {
+    $fullName = $_POST['full_Name'];
+    $donors = $db->searchDonorByName($fullName);
+}
+
 $title = "Home";
 $setHomeActive = "active";
 include 'layout/_header.php';
@@ -57,6 +66,33 @@ include 'layout/_top_nav.php';
                     </div>
 
                 </form>
+                <form class="form-horizontal" method="post" action="home.php">
+                    <div class="form-group">
+                        <label class="col-sm-6">Search for donor by gender </label>
+                        <div class="col-sm-4">
+                            <select name="genders" class="form-control">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>                                
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="btn btn-info btn-sm" name="searchByGenderBtn" >Search</button>
+                        </div>
+                    </div>
+
+                </form>
+                <form class="form-horizontal" method="post" action="home.php">
+                    <div class="form-group">
+                        <label class="col-sm-6">Search for donor by name </label>
+                        <div class="col-sm-4">
+                            <input type="text" name="full_Name" value="" required="true" class="form-control"/>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="btn btn-info btn-sm" name="searchByNameBtn" >Search</button>
+                        </div>
+                    </div>
+
+                </form>
             </div>
         </div>
         <div class="col-md-3"></div>
@@ -77,6 +113,20 @@ include 'layout/_top_nav.php';
             <?php if(isset($_POST['searchByCityBtn'])): ?>
                 <?php if(isset($donors[0])): ?>
                     <label>Total Number of Donors in this City:</label> <span class="emphasize"><?= count($donors); ?></span>
+                <?php endif; ?>
+            <?php endif; ?>
+
+            <!-- If the donor is search by a particular gender -->
+            <?php if(isset($_POST['searchByGenderBtn'])): ?>
+                <?php if(isset($donors[0])): ?>
+                    <label>Total Number of <?= $donors[0]['sex']; ?> Donors:</label> <span class="emphasize"><?= count($donors); ?></span>
+                <?php endif; ?>
+            <?php endif; ?>
+
+            <!-- If the donor is search by a particular name -->
+            <?php if(isset($_POST['searchByNameBtn'])): ?>
+                <?php if(isset($donors[0])): ?>
+                    <label>Total Number of Donors:</label> <span class="emphasize"><?= count($donors); ?></span>
                 <?php endif; ?>
             <?php endif; ?>
             
