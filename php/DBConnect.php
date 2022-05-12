@@ -102,6 +102,17 @@ class DBConnect {
         return $stmt->fetchAll();
     }
     
+    public function searchDonorByGender($gender){
+        $stmt = $this->db->prepare("SELECT * FROM donors WHERE sex LIKE ?");
+        $stmt->execute([$gender]);
+        return $stmt->fetchAll();
+    }
+    public function searchDonorByName($fullName){
+        $stmt = $this->db->prepare("SELECT * FROM donors WHERE CONCAT(fname,' ', lname) LIKE ?");
+        $stmt->execute(["%".$fullName."%"]);
+        return $stmt->fetchAll();
+    }
+    
     public function logout(){
         session_start();
         session_destroy();
