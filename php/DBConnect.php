@@ -103,11 +103,7 @@ class DBConnect {
         return $stmt->fetchAll();
     }
     
-    public function logout(){
-        ssession_start(); //to ensure you are using same session
-	session_destroy(); //destroy the session
-	header("location:/Blood-Bank-Management-System/index.php")
-    }
+    
     
     public function getDonorProfileById($id){
         $stmt = $this->db->prepare("SELECT * FROM donors WHERE id=?");
