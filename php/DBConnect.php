@@ -28,6 +28,7 @@ class DBConnect {
         }
         return $this->db;
     }
+
     
     public function auth(){
         session_start();
@@ -103,9 +104,9 @@ class DBConnect {
     }
     
     public function logout(){
-        session_start();
-        session_destroy();
-        header("Location: http://localhost/BDManagement/");
+        ssession_start(); //to ensure you are using same session
+	session_destroy(); //destroy the session
+	header("location:/Blood-Bank-Management-System/index.php")
     }
     
     public function getDonorProfileById($id){
