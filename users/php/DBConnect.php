@@ -18,6 +18,13 @@ class DBConnect {
     const DB_PASSWORD = "";
     const DB_NAME = "donor";
 
+    // Changes
+    //MySQLi Procedural
+    public function mysqli(){
+        $mysqli = mysqli_connect("localhost", "root", "", "donor"); 
+        return $mysqli;
+    }
+    
     public function __construct() {
         $dsn = 'mysql:dbname=' . self::DB_NAME . ';host=' . self::DB_SERVER;
         try {
@@ -44,6 +51,14 @@ class DBConnect {
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+    // Changes
+    public function getDonors(){
+        $stmt = $this->db->prepare("SELECT * FROM donors");
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
     
     
     
