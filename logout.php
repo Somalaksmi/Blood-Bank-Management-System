@@ -1,5 +1,6 @@
 <?php
-session_start(); 
-session_destroy(); 
-header("location:/Blood-Bank-Management-System/index.php")
+require_once 'php/DBConnect.php';
+
+$db = new DBConnect();
+$db->logout();
 ?>

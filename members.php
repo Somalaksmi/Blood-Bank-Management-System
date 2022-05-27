@@ -2,7 +2,11 @@
 
 $i=0;
 require_once 'users/php/DBConnect.php';
+
+
+
 $db = new DBConnect();
+$db->auth();
 $users = $db->getUsers();
 
 $title="Members Area";$setMemberActive="active";$bg_background="bg-warning";

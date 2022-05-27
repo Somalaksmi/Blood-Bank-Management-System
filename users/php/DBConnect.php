@@ -28,6 +28,13 @@ class DBConnect {
         }
         return $this->db;
     }
+    public function auth(){
+        session_start();
+        if(! isset($_SESSION['username'])){
+            session_destroy();
+            header("Location: http://localhost/Blood-Bank-Management-System/index.php");
+        }     
+    }
     
     public function getDonorsByBloodType($bloodType){
         $stmt = $this->db->prepare("SELECT * FROM donors WHERE b_type LIKE ?");
