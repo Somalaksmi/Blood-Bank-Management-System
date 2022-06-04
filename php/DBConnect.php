@@ -108,7 +108,7 @@ class DBConnect {
         return $stmt->fetchAll();
     }
     public function searchDonorByName($fullName){
-        $stmt = $this->db->prepare("SELECT * FROM donors WHERE CONCAT(fname,' ', lname) LIKE ?");
+        $stmt = $this->db->prepare("SELECT * FROM donors WHERE CONCAT(fname,' ',IFNULL(mname,''),' ',lname) LIKE ?");
         $stmt->execute(["%".$fullName."%"]);
         return $stmt->fetchAll();
     }
