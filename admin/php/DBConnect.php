@@ -29,12 +29,12 @@ class DBConnect {
         return $this->db;
     }
     
-    public function auth(){
+   public function auth(){
         session_start();
         if(! isset($_SESSION['username'])){
-            header("Location: http://localhost/BDManagement/admin");
+            session_destroy();
+            header("Location: http://localhost/Blood-Bank-Management-System/index.php");
         }
-    }
     
     public function checkAuth(){
         session_start();

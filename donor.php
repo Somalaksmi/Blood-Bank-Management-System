@@ -1,4 +1,7 @@
 <?php
+require_once 'php/DBConnect.php';
+$db = new DBConnect();
+$db->auth();
 $success=NULL;$message=NULL;
 if(isset($_POST['submitBtn'])){
     $fname = $_POST['firstName'];

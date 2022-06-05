@@ -34,7 +34,7 @@ class DBConnect {
         if(! isset($_SESSION['username'])){
             session_destroy();
             header("Location: http://localhost/Blood-Bank-Management-System/index.php");
-        }     
+        }       
     }
     public function authLogin(){
         session_start();
@@ -100,17 +100,6 @@ class DBConnect {
     public function searchDonorByCity($city){
         $stmt = $this->db->prepare("SELECT * FROM donors WHERE city LIKE ?");
         $stmt->execute(["%".$city."%"]);
-        return $stmt->fetchAll();
-    }
-    
-    public function searchDonorByGender($gender){
-        $stmt = $this->db->prepare("SELECT * FROM donors WHERE sex LIKE ?");
-        $stmt->execute([$gender]);
-        return $stmt->fetchAll();
-    }
-    public function searchDonorByName($fullName){
-        $stmt = $this->db->prepare("SELECT * FROM donors WHERE CONCAT(fname,' ',IFNULL(mname,''),' ',lname) LIKE ?");
-        $stmt->execute(["%".$fullName."%"]);
         return $stmt->fetchAll();
     }
     
