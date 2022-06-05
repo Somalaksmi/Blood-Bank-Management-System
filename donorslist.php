@@ -2,19 +2,16 @@
 
 $i=0;
 require_once 'users/php/DBConnect.php';
-
-
-
 $db = new DBConnect();
-$db->auth();
-$users = $db->getUsers();
+$donors = $db->getDonors();
 
-$title="Members Area";$setMemberActive="active";$bg_background="bg-warning";
+$title="Donors Area";$bg_background="bg-warning";
+$setDonorslistActive = "active";
 include 'layout/_header.php';
 
 include 'layout/_top_nav.php';
 ?>
 
-<?php include '_member_layout.php'; ?>
+<?php include 'users/layout/_donor_layout.php'; ?>
 
 <?php include 'layout/_footer.php'; ?>

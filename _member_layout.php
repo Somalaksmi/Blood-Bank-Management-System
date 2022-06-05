@@ -1,7 +1,7 @@
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <?php
 
-include_once("php/DBConnect.php");
+include_once("users/php/DBConnect.php");
 
 $db = new DBConnect();
 $mysqli = $db->mysqli();
@@ -39,8 +39,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
                         echo "<td>".$res['city']."</td>";	
                         echo "<td>".$res['mobile']."</td>";								
                         // echo "<td><a href=\"editmember.php?id=$res[id]\"><i class=\"fa-solid fa fa-pen\" aria-hidden=\"true\"></i></a></td>";
-                    //     echo "<td><a href=\"deletemember.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a></td>";
-			        // echo "</tr>";
+                        echo "<td><a href=\"deletemember.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a></td>";
+			        echo "</tr>";
 		        }
 		
 		        //Step 5: Freeing Resources and Closing Connection using mysqli
