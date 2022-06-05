@@ -27,8 +27,8 @@ if (isset($_POST['submit'])) {
 }
 $title = "Admin Home";
 $setHomeActive = "active";
-include_once 'layout/_header.php';
-include_once 'layout/navbar.php';
+include_once 'layout/header.php';
+include_once 'layout/admin_navbar.php';
 ?>
 
 <div class="container">
@@ -89,4 +89,4 @@ include_once 'layout/navbar.php';
     <div class="col-md-3"></div>
 </div>
 
-<?php include 'layout/_footer.php'; ?>
+<?php include 'layout/admin_footer.php'; ?>

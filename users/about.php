@@ -1,8 +1,8 @@
 <?php
 $title="About Us";$setAboutActive="active";
-include 'layout/_header.php';
+include 'layout/header.php';
 
-include 'layout/navbar.php';
+include 'layout/user_navbar.php';
 ?>
 
 <div class="container">
@@ -15,5 +15,5 @@ include 'layout/navbar.php';
     </div>
 </div>
 
-<?php include 'layout/_footer.php'; ?>
+<?php include 'layout/user_footer.php'; ?>
 

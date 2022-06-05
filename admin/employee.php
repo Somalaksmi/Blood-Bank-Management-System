@@ -6,8 +6,8 @@ $db->auth();
 $employees = $db->getEmployees();
 
 $title="Employee"; $setEmployeeActive="active";
-include 'layout/_header.php'; 
-include 'layout/navbar.php';
+include 'layout/header.php'; 
+include 'layout/admin_navbar.php';
 
 ?>
 
@@ -51,5 +51,5 @@ include 'layout/navbar.php';
     </div>
 </div>
 
-<?php include 'layout/_footer.php'; ?>
+<?php include 'layout/admin_footer.php'; ?>
 

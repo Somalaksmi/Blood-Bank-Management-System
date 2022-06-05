@@ -1,7 +1,7 @@
 <?php
 
 $i=0;
-require_once 'users/php/DBConnect.php';
+require_once 'users/php/user_DBConnect.php';
 $db = new DBConnect();
 $users = $db->getUsers();
 

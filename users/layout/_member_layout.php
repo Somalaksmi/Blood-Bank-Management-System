@@ -4,7 +4,7 @@
         <div class="col-md-10">
             <?php if(isset($users)): $i++;?>
             <table class="table table-condensed">
-                <thead>
+                <thead style="font-size:medium ; font-weight:bold">
                 <th>Name</th>
                 <th>Email</th>
                 <th>D.O.B</th>
@@ -15,7 +15,7 @@
                 <th>Mobile</th>
                 </thead>
                 <?php foreach($users as $u): $i++;?>
-                <tr class="<?php if($i%2==0){echo $bg_background;}else{echo 'bg-danger';} ?>">
+                <tr class="<?php if($i%2==0){echo $bg_background;}else{echo 'bg-danger';} ?>" style="color:white ; font-size:small">
                     <td><?= $u['first_name']." ".$u['last_name']; ?></td>
                     <td><?= $u['email']; ?></td>
                     <td><?= $u['dob']; ?></td>
