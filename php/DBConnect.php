@@ -32,13 +32,14 @@ class DBConnect {
     public function auth(){
         session_start();
         if(! isset($_SESSION['username'])){
-            header("Location: http://localhost/BDManagement");
-        }       
+            session_destroy();
+            header("Location: http://localhost/Blood-Bank-Management-System/index.php");
+        }     
     }
     public function authLogin(){
         session_start();
         if(isset($_SESSION['username'])){
-            header("Location: http://localhost/BDManagement/home.php");
+            header("Location: http://localhost/Blood-Bank-Management-System/home.php");
         }
     }
     
@@ -102,10 +103,21 @@ class DBConnect {
         return $stmt->fetchAll();
     }
     
+    public function searchDonorByGender($gender){
+        $stmt = $this->db->prepare("SELECT * FROM donors WHERE sex LIKE ?");
+        $stmt->execute([$gender]);
+        return $stmt->fetchAll();
+    }
+    public function searchDonorByName($fullName){
+        $stmt = $this->db->prepare("SELECT * FROM donors WHERE CONCAT(fname,' ',IFNULL(mname,''),' ',lname) LIKE ?");
+        $stmt->execute(["%".$fullName."%"]);
+        return $stmt->fetchAll();
+    }
+    
     public function logout(){
         session_start();
         session_destroy();
-        header("Location: http://localhost/BDManagement/");
+        header("Location: http://localhost/Blood-Bank-Management-System/index.php");
     }
     
     public function getDonorProfileById($id){

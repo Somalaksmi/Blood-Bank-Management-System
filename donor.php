@@ -38,9 +38,9 @@ if(isset($_POST['submitBtn'])){
 
 $title = "Donor";
 $setDonorActive = "active";
-include 'layout/_header.php';
+include 'layout/header.php';
 
-include 'layout/_top_nav.php';
+include 'layout/admin_navbar.php';
 ?>
 
 <div class="container">
@@ -57,10 +57,10 @@ include 'layout/_top_nav.php';
             
             <form method="post" class="form-horizontal" role="form" action="donor.php">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h5>Donor Basic Info</h5>
+                    <div class="panel-heading" style="background-color:#a30000 ;">
+                        <h5 style="color:white ; font-size:x-large ;">Donor Basic Info</h5>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body" style="font-size:medium ;">
                         <div class="form-group">
                             <label class="col-sm-3">Name</label>
                             <div class="col-sm-3">
@@ -127,10 +127,10 @@ include 'layout/_top_nav.php';
                             </div>
                         </div>           
                     </div>
-                    <div class="panel-heading">
-                        <h5>Donor Medical Info</h5>
+                    <div class="panel-heading" style="background-color:#a30000 ;">
+                        <h5 style="color:white ; font-size:x-large ;">Donor Medical Info</h5>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body" style="font-size:medium ;">
                         <div class="form-group">
                             <label class="col-sm-4">Date of Donation</label>
                             <div class="col-sm-8">
@@ -201,7 +201,7 @@ include 'layout/_top_nav.php';
                         <div class="form-group">
                             <label class="col-sm-4"> </label>
                             <div class="col-sm-8">
-                                <button class="btn btn-success" type="submit" name="submitBtn" >Add Donor</button>
+                                <button class="btn btn-success" type="submit" name="submitBtn" style="font-size:large ; margin-right:10px ; background-color:#a30000; border:none">Add Donor</button>
                             </div>
                         </div>
                     </div>
@@ -212,4 +212,4 @@ include 'layout/_top_nav.php';
     </div>
 </div>
 
-<?php include 'layout/_footer.php'; ?>
+<?php include 'layout/admin_footer.php'; ?>

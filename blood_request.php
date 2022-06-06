@@ -5,8 +5,9 @@ $db->auth();
 
 $title = "Blood Requests";
 $setBloodRequestActive = "active";
-include 'layout/_header.php';
+include 'layout/header.php';
 
-include 'layout/_top_nav.php';
+include 'layout/admin_navbar.php';
 
 ?>
+<?php include 'layout/admin_footer.php'; ?>

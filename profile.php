@@ -8,11 +8,9 @@ $flag = $db->checkAuth();
 $donor = $db->getDonorProfileById($id);
 
 $title = "Donor Profile";
-include 'users/layout/header.php';
+include 'layout/header.php';
 
-if($flag){
-    include 'layout/_top_nav.php';
-}
+
 
 ?>
 
@@ -118,4 +116,4 @@ if($flag){
     </div>
 </div>
 
-<?php include 'users/layout/user_footer.php'; ?>
+<?php include 'layout/admin_footer.php'; ?>
