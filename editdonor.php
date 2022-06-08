@@ -1,6 +1,7 @@
 <?php
 include('users/php/DBConnect.php');
 $db = new DBConnect();
+$db->auth();
 $mysqli = $db->mysqli();
 $id=$_GET['id'];
 $result = mysqli_query($mysqli, "SELECT * FROM donors WHERE id=$id;");
