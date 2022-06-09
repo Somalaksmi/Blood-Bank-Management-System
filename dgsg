@@ -1,0 +1,142 @@
+[33mcommit aa41a47419b42b328617cb5479982e8a1cfa892b[m[33m ([m[1;36mHEAD -> [m[1;32mfixed-styling[m[33m)[m
+Author: Viimhalan <viimhalan14112000@gmail.com>
+Date:   Fri Jun 10 03:15:21 2022 +0800
+
+    Editing header and footer
+
+[33mcommit 63b6ad501d708bff9bcaad921e86bc555ffe2bbb[m
+Author: Viimhalan <viimhalan14112000@gmail.com>
+Date:   Fri Jun 10 02:50:46 2022 +0800
+
+    checking branch function
+
+[33mcommit 0faa89e4b40bc7a6b7676490e55b15e8b2723d36[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmaster[m[33m, [m[1;32mmain[m[33m)[m
+Merge: 1ee7012 bca2827
+Author: throw226th <haritharan98@siswa.um.edu.my>
+Date:   Sun Jun 5 10:44:55 2022 +0800
+
+    Merge branch 'add-info'
+
+[33mcommit 1ee70127e776b46cc1cd189f560dc58efa3f901b[m
+Merge: 91c2682 8e318e0
+Author: throw226th <haritharan98@siswa.um.edu.my>
+Date:   Sun Jun 5 10:43:18 2022 +0800
+
+    Merge branch 'edit-delete-data-in-database'
+
+[33mcommit 91c2682b299b322f0c75ccd4d7054ca059d58f9d[m
+Merge: d0ff8ae b517d1b
+Author: throw226th <haritharan98@siswa.um.edu.my>
+Date:   Sun Jun 5 10:40:21 2022 +0800
+
+    Merge branch 'Fixed-Logout-functionality'
+
+[33mcommit d0ff8aea80e935915aad7bbc7fff15866ea71859[m
+Author: throw226th <haritharan98@siswa.um.edu.my>
+Date:   Sun Jun 5 04:32:28 2022 +0800
+
+    added middle name into WHERE clause
+
+[33mcommit bca2827828e659b3f0335412200dde08ebaec124[m
+Author: Laksmi0711 <57062496+Laksmi0711@users.noreply.github.com>
+Date:   Sun May 29 23:53:45 2022 +0800
+
+    adding files
+
+[33mcommit b517d1b4462471a9f9299e074ac4ee51519d09e8[m
+Author: SIM-777 <102203396+SIM-777@users.noreply.github.com>
+Date:   Fri May 27 12:04:45 2022 +0800
+
+    Fixed DBConnect.php
+    
+    User can logout of the system and cannot go back to the home page unless they log in again
+
+[33mcommit 8e318e08a5ed92887be6106ff99f28222cf66a55[m
+Author: Vinishaah Jeyabalan <vinishaahjeyabalan@gmail.com>
+Date:   Wed May 25 16:38:04 2022 +0800
+
+    adding new files named _member_layout.php, deletedonor.php, deletemember.php, donorslist.php, editdonor.php, updatedonor.php and users/layout/_donor_layout.php
+
+[33mcommit da7f65f05f01eec78cdbf15264a62bfebedbccc2[m
+Author: Vinishaah Jeyabalan <vinishaahjeyabalan@gmail.com>
+Date:   Wed May 25 16:35:21 2022 +0800
+
+    modified users/php/DBConnect.php file
+
+[33mcommit 989b9d6a608f3ee89d68e08348444173acf9bfaf[m
+Author: Vinishaah Jeyabalan <vinishaahjeyabalan@gmail.com>
+Date:   Wed May 25 16:34:09 2022 +0800
+
+    modified users/layout/_member_layout.php file
+
+[33mcommit fa0ba3a16aa5035a45124193ee76cb3e9f350f73[m
+Author: Vinishaah Jeyabalan <vinishaahjeyabalan@gmail.com>
+Date:   Wed May 25 16:32:45 2022 +0800
+
+    modified members.php file
+
+[33mcommit 4fc9b59aa4435ef729999b14e4698f3f1fb84b5b[m
+Author: Vinishaah Jeyabalan <vinishaahjeyabalan@gmail.com>
+Date:   Wed May 25 16:31:43 2022 +0800
+
+    modified layout/_top_nav.php file
+
+[33mcommit 3a65e21712e01fea8c48c3570042afc0d72aba18[m
+Author: SIM-777 <102203396+SIM-777@users.noreply.github.com>
+Date:   Tue May 17 17:40:17 2022 +0800
+
+    Update DBConnect.php
+
+[33mcommit 9d7d3ab6828614713dc59219ae1014c29703ca94[m
+Author: SIM-777 <102203396+SIM-777@users.noreply.github.com>
+Date:   Tue May 17 17:38:06 2022 +0800
+
+    Update DBConnect.php
+
+[33mcommit e8a9eae7e8574f4dfdbc0d3f025ee9378913bec8[m
+Author: SIM-777 <102203396+SIM-777@users.noreply.github.com>
+Date:   Tue May 17 17:29:21 2022 +0800
+
+    Added the log out functionality
+    
+    The previous code had a log out button but the function for the log out was incomplete.So i added the code so that when users click on logout button,they will be logged out of the system and redirected to login page
+
+[33mcommit 4972788a0a92d259a5b216f130d9a48f116a1b3e[m
+Author: throw226th <104050334+throw226th@users.noreply.github.com>
+Date:   Fri May 13 03:43:13 2022 +0800
+
+    Update home.php
+    
+    added bootstrap grid to host new search filters
+
+[33mcommit 8788c002a1637db4df08c85b03dd2b0056fa1abf[m
+Author: throw226th <104050334+throw226th@users.noreply.github.com>
+Date:   Fri May 13 03:40:47 2022 +0800
+
+    Update DBConnect.php
+    
+    added query functions for the search filters gender and name
+
+[33mcommit 588f0a4405848c0147554f2f5b45ee2fee52c5be[m
+Author: Somalaksmi <82956545+Somalaksmi@users.noreply.github.com>
+Date:   Wed Apr 20 10:26:46 2022 +0800
+
+    Update README.md
+
+[33mcommit c87d32fd13473204e7e6ca659b57ee8255cd231a[m
+Author: Somalaksmi <82956545+Somalaksmi@users.noreply.github.com>
+Date:   Wed Apr 20 10:25:26 2022 +0800
+
+    Update README.md
+
+[33mcommit 9682cb44a747515ae893bc4e8a65d252ad98fc13[m
+Author: Somalaksmi <82956545+Somalaksmi@users.noreply.github.com>
+Date:   Thu Apr 7 07:42:05 2022 +0800
+
+    Add files via upload
+
+[33mcommit bb80dbfb4bf934b2ad1188c60aa85e41e8871a54[m
+Author: Somalaksmi <82956545+Somalaksmi@users.noreply.github.com>
+Date:   Thu Apr 7 07:38:14 2022 +0800
+
+    Initial commit
