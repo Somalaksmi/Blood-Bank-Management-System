@@ -39,14 +39,14 @@ include 'layout/navbar.php';
         <?php endif; ?>
         
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading" style="background-color:#a30000 ; padding: 20px 30px 20px 30px">
                 <div class="col-md-4">
-                    <img src="assets/register.jpg" class="img img-responsive">
+                    <img src="assets/register.jpg" class="img img-responsive" style="width:300px; height:100px ; border:none ;">
                 </div>
-                <p>Join our community and reach out your hands for the others in need. Just by registering below you will make an agreement
+                <p style="color:white ; font-size:medium">Join our community and reach out your hands for the others in need. Just by registering below you will make an agreement
                     with us that you are ready to donate and will be available whenever we will need you.</p>               
             </div>
-            <div class="panel-body">
+            <div class="panel-body" style="font-size:medium ;">
                 <form method="post" action="register.php" class="form-horizontal">
                     <div class="form-group">
                         <label class="col-md-4 form-label">Name</label>
@@ -113,7 +113,7 @@ include 'layout/navbar.php';
                     <div class="form-group">
                         <label class="form-label col-md-4"></label>
                         <div class="col-md-8">
-                            <button class="btn btn-success" name="submitBtn" >Join</button>
+                            <button class="btn btn-success" name="submitBtn"  style="font-size:medium ; background-color:#a30000 ; border:none ;">Join</button>
                         </div>
                     </div>
                 </form>
