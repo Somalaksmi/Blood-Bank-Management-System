@@ -14,7 +14,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM donors ORDER BY id DESC");
         <div class="col-md-20">
             <?php if(isset($donors)): $i++;?>
             <table class="table table-condensed">
-                <thead>
+                <thead style="font-size:small ; font-weight:bold">
                 <th>Name</th>
                 <th>Gender</th>
                 <th>Blood Group</th>
@@ -39,7 +39,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM donors ORDER BY id DESC");
                 while($res = mysqli_fetch_array($result)) { 
                 $i++;
                 ?>
-                    <tr class="<?php if($i%2==0){echo $bg_background;}else{echo 'bg-danger';} ?>">
+                    <tr class="<?php if($i%2==0){echo "bg-success";}else{echo 'bg-danger';} ?>" style="color:white ; font-size:x-small">
                     <?php 
                         echo "<td>".$res['fname']." ".$res['mname']." ".$res['lname']."</td>";
                         echo "<td>".$res['sex']."</td>";
@@ -60,8 +60,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM donors ORDER BY id DESC");
                         echo "<td>".$res['aids']."</td>";		
                         echo "<td>".$res['malaria_smear']."</td>";
                         echo "<td>".$res['hematocrit']."</td>";								
-                        echo "<td><a href=\"editdonor.php?id=$res[id]\"><i class=\"fa-solid fa fa-pen\" aria-hidden=\"true\"></i></a></td>";
-                        echo "<td><a href=\"deletedonor.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a></td>";
+                        echo "<td><a href=\"editdonor.php?id=$res[id]\"><i class=\"fa-solid fa fa-pen\" aria-hidden=\"true\" style=\"color:white ;\"></i></a></td>";
+                        echo "<td><a href=\"deletedonor.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\"><i class=\"fa fa-trash\" aria-hidden=\"true\" style=\"color:white ;\"></i></a></td>";
 			        echo "</tr>";
 		        }
 		

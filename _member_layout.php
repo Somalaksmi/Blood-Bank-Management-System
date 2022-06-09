@@ -14,7 +14,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
         <div class="col-md-10">
             <?php if(isset($users)): $i++;?>
             <table class="table table-condensed">
-                <thead>
+                <thead style="font-size:medium ; font-weight:bold">
                 <th>Name</th>
                 <th>Email</th>
                 <th>D.O.B</th>
@@ -28,7 +28,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
                 while($res = mysqli_fetch_array($result)) { 
                 $i++;
                 ?>
-                    <tr class="<?php if($i%2==0){echo $bg_background;}else{echo 'bg-danger';} ?>">
+                    <tr class="<?php if($i%2==0){echo "bg-success";}else{echo 'bg-danger';} ?>" style="color:white ; font-size:small">
                     <?php 
                         echo "<td>".$res['first_name']." ".$res['last_name']."</td>";
                         echo "<td>".$res['email']."</td>";
@@ -39,7 +39,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
                         echo "<td>".$res['city']."</td>";	
                         echo "<td>".$res['mobile']."</td>";								
                         // echo "<td><a href=\"editmember.php?id=$res[id]\"><i class=\"fa-solid fa fa-pen\" aria-hidden=\"true\"></i></a></td>";
-                        echo "<td><a href=\"deletemember.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a></td>";
+                        echo "<td><a href=\"deletemember.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\"><i class=\"fa fa-trash\" aria-hidden=\"true\" style=\"color:white ;\"></i></a></td>";
 			        echo "</tr>";
 		        }
 		

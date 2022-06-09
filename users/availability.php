@@ -19,8 +19,8 @@ include 'layout/navbar.php';
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <form class="form-inline" role='form' method="post" action="availability.php">
-                <label class="form-label">Select Blood Group: </label>
-                <select name="blood_group" class="form-control">
+                <label class="form-label" style="font-weight:bold ; font-size:large ; margin-right:10px ;">Select Blood Group: </label>
+                <select name="blood_group" class="form-control" style="font-size:large ; margin-right:10px ;">
                     <option value="O+">O+</option>
                     <option value="O-">O-</option>
                     <option value="A+">A+</option>
@@ -30,14 +30,14 @@ include 'layout/navbar.php';
                     <option value="AB+">AB+</option>
                     <option value="AB-">AB-</option>
                 </select>
-                <button type="submit" class="btn btn-success" name="searchBtn">Check Availability</button>
+                <button type="submit" class="btn btn-success" name="searchBtn" style="font-size:large ; margin-right:10px ; background-color:#a30000; border:none">Check Availability</button>
             </form>
             <br>
             <div class="form-group">
                 <?php if(isset($donors[0])): ?>
-                <label>Total number of donors with <?= $donors[0]['b_type']; ?> </label><div class="emphasize"><?= count($donors); ?> Donors</div>
+                <label style="font-size:large ; margin-right:10px ;">Total number of donors with <?= $donors[0]['b_type']; ?> </label><div class="emphasize"><?= count($donors); ?> Donors</div>
                 <table class="table table-condensed">
-                    <thead>
+                    <thead style="font-weight:bold ; font-size:medium ;">
                     <th>Name</th>
                     <th>Gender</th>
                     <th>D.O.B</th>
@@ -48,8 +48,8 @@ include 'layout/navbar.php';
                     
                     <?php foreach($donors as $d): $i++;?>
                     
-                    <tr class="<?php if($i%2==0){echo 'bg-danger';} else{echo 'bg-success';} ?>">
-                        <td><a href="../profile.php?id=<?= $d['id']; ?>"><?= $d['fname'] ." ".$d['mname']." ".$d['lname']; ?></a></td>
+                    <tr class="<?php if($i%2==0){echo 'bg-danger';} else{echo 'bg-success';} ?>" style="font-size:small ; color:white ; text-decoration:none">
+                        <td><a href="../profile.php?id=<?= $d['id']; ?>" style="color:white ;"><?= $d['fname'] ." ".$d['mname']." ".$d['lname']; ?></a></td>
                         <td><?= $d['sex']; ?></td>
                         <td><?= $d['bday']; ?></td>
                         <td><?= wordwrap($d['h_address'],26,'<br>' ); ?></td>

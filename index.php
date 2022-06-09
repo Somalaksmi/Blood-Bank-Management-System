@@ -53,7 +53,7 @@ include 'layout/_header.php';
                         <div class="col-md-6" style="margin: 20px 20px 20px 150px;">
                             <img src="assets/security-icon.png" class="img img-responsive img-thumbnail">
                         </div>
-                        <form class="form-vertical" role="form" method="post" action="login_index.php">
+                        <form class="form-vertical" role="form" method="post" action="index.php">
                             <div class="form-group">
                                 <input type="text" class="form-control" required="true" name="username" placeholder="Username">
                             </div>

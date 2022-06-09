@@ -14,7 +14,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
         <div class="col-md-10">
             <?php if(isset($users)): $i++;?>
             <table class="table table-condensed">
-                <thead>
+                <thead style="font-size:medium ; font-weight:bold">
                 <th>Name</th>
                 <th>Email</th>
                 <th>D.O.B</th>
@@ -28,7 +28,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
                 while($res = mysqli_fetch_array($result)) { 
                 $i++;
                 ?>
-                    <tr class="<?php if($i%2==0){echo $bg_background;}else{echo 'bg-danger';} ?>">
+                    <tr class="<?php if($i%2==0){echo $bg_background;}else{echo 'bg-danger';} ?>" style="color:white ; font-size:small">
                     <?php 
                         echo "<td>".$res['first_name']." ".$res['last_name']."</td>";
                         echo "<td>".$res['email']."</td>";
