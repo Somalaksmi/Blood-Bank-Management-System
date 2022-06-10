@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <title>BLOOD BANK</title>
-        <link rel="icon" href="assets/blood_drop.png">
+        <link rel="icon" href="blood_drop.png">
         <style>
             body{
                 background-color: white;

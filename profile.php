@@ -10,9 +10,7 @@ $donor = $db->getDonorProfileById($id);
 $title = "Donor Profile";
 include 'layout/_header.php';
 
-if($flag){
-    include 'layout/_top_nav.php';
-}
+
 
 ?>
 
@@ -21,11 +19,11 @@ if($flag){
         <div class="col-sm-1"></div>
         <div class="col-md-5">
             <div class="panel panel-success">
-                <div class="panel-heading">
-                    <h5>Basic Info</h5>
+                <div class="panel-heading" style="background-color: #C91C1C;">
+                    <h5 style="color:white ; font-size:x-large">Basic Info</h5>
                 </div>
                 <div class="panel-body">
-                    <table class="table table-condensed">
+                    <table class="table table-condensed" style="font-size:medium ;">
                         <tr>
                             <td><label>Name</label></td>
                             <td><?= $donor[0]['fname']." ".$donor[0]['mname']." ".$donor[0]['lname']; ?></td>
@@ -60,11 +58,11 @@ if($flag){
         </div>
         <div class="col-md-5">
             <div class="panel panel-success">
-                <div class="panel-heading">
-                    <h5>Medical Info</h5>
+                <div class="panel-heading" style="background-color: #C91C1C; color:white">
+                    <h5 style="color:white ; font-size:x-large">Medical Info</h5>
                 </div>
                 <div class="panel-body">
-                    <table class="table table-condensed">
+                    <table class="table table-condensed" style="font-size:medium ;">
                         <tr>
                             <td><label>Blood Type</label></td>
                             <td><?= $donor[0]['b_type']; ?></td>
