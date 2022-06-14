@@ -277,7 +277,7 @@ include 'layout/navbar.php';
 <div class="container-fluid"><br>
   <div class="row" style="margin-left: 5%;">
     <div class="col-sm-4">
-      <div style="width: 40rem; height:29rem;background-color:#C91C1C;">
+      <div style="width: 40rem; height:29rem; background-color:#C91C1C;">
         <img src="assets/Feature.png" class="card-img-top">
         <div class="card-body" style="background-color:#C91C1C">
           <p class="card-text text-center" style="font-size:medium ; color:white"><strong style="font-size:large ;">ABOUT SYSTEM</strong><br> This project aims at maintaining all the information pertaining to blood donors, different blood groups available in each blood bank and help them manage in a better way.
