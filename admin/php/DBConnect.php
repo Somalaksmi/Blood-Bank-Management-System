@@ -33,7 +33,7 @@ class DBConnect {
         session_start();
         if(! isset($_SESSION['username'])){
             session_destroy();
-            header("Location: http://localhost/Blood-Bank-Management-System/index.php");
+            header("Location:index.php");
         }
     
     public function checkAuth(){

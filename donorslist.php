@@ -3,6 +3,7 @@
 $i=0;
 require_once 'users/php/DBConnect.php';
 $db = new DBConnect();
+$db->auth();
 $donors = $db->getDonors();
 
 $title="Donors Area";$bg_background="bg-warning";

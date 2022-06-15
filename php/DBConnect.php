@@ -33,13 +33,13 @@ class DBConnect {
         session_start();
         if(! isset($_SESSION['username'])){
             session_destroy();
-            header("Location: http://localhost/Blood-Bank-Management-System/index.php");
+            header("Location:index.php");
         }     
     }
     public function authLogin(){
         session_start();
         if(isset($_SESSION['username'])){
-            header("Location: http://localhost/Blood-Bank-Management-System/home.php");
+            header("Location:home.php");
         }
     }
     
@@ -117,7 +117,7 @@ class DBConnect {
     public function logout(){
         session_start();
         session_destroy();
-        header("Location: http://localhost/Blood-Bank-Management-System/index.php");
+        header("Location:index.php");
     }
     
     public function getDonorProfileById($id){
