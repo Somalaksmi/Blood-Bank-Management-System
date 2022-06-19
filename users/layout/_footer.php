@@ -20,7 +20,7 @@
                     <div class="footer-widget ">
                         <h2 class="widget-title ">Informations</h2>
                         <ul>
-                            <li><a href="# " style="color:white; text-decoration:none;">About Us</a></li>
+                            <li><a href="about.php " style="color:white; text-decoration:none;">About Us</a></li>
                             <li><a href="# " style="color:white; text-decoration:none;">Contact Us</a></li>
                             <li><a href="# " style="color:white; text-decoration:none;">Help & FAQs</a></li>
                             <li><a href="# " style="color:white; text-decoration:none;">Terms & Conditions</a></li>
