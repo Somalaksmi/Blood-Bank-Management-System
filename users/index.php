@@ -135,7 +135,7 @@ include 'layout/navbar.php';
 <div class="row">
   <div class="column" style="background-color:#C91C1C; padding:50px">
     <p class="text-center" style="color:#f2f2f2;font-size:25px;">Blood Bank Management System (BBMS) is a browser based system that is designed to store, process, retrieve and analyze information concerned with the administrative and inventory management within a blood bank.</p>
-    <a href="product.html" class="btn " style="margin-top: 25px; margin-left: 45%; background-color: #f2f2f2; color:#C91C1C; font-weight:bold">About Us</a>
+    <a href="about.php" class="btn " style="margin-top: 25px; margin-left: 45%; background-color: #f2f2f2; color:#C91C1C; font-weight:bold">About Us</a>
   </div>
   <div class="column" style="background-color:white">
     <img src="assets/BDP-4.jpg" alt="BLOOD DONATION" style="width:275px; height:275px; margin-left:250px">
